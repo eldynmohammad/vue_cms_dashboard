@@ -110,6 +110,15 @@ a {
   overflow: hidden;
 }
 
+.navbar-mobile-opened {
+  left: 0;
+  width: 240px;
+}
+
+.navbar-mobile-opened ~ .right__section {
+  left: 240px;
+}
+
 @media (min-width: 781px) {
   .navbar-mobile {
     display: none;
@@ -118,15 +127,16 @@ a {
   .navbar-desktop {
     display: block;
   }
-}
 
-.navbar-mobile-opened {
-  left: 0;
-  width: 240px;
-}
+  .navbar-mobile-opened {
+    left: 0;
+    width: 240px;
+  }
 
-.navbar-mobile-opened ~ .right__section {
-  left: 240px;
+  .navbar-mobile-opened ~ .right__section {
+    left: 0;
+    width: 100%;
+  }
 }
 
 .navbar-desktop-hidden {
@@ -206,11 +216,10 @@ a {
 
 .topbar {
   display: flex;
-  position: fixed;
   justify-content: space-between;
   align-items: center;
   height: 64px;
-  width: calc(100% - 240px);
+  width: 100%;
   background-color: var(--lightest-color);
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.15);
   transition: 0.3s;
@@ -272,7 +281,7 @@ a {
 /* ========== wrapper ========== */
 .wrapper {
   position: relative;
-  margin-top: 64px;
+  margin-top: 12px;
   padding: 1.5rem;
   height: 100%;
   overflow: auto;
